@@ -118,5 +118,18 @@ footer{
     bottom: 0;
 }
 
+table td {
+    background: red;
+    padding: 10px;
+    text-align: left;
+    color: white;
+    
+
+}
+table th {
+    background: gray;
+    color: white;
+}
+
 
 
