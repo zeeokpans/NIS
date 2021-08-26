@@ -1,17 +1,15 @@
 body{
     margin: 0;
     padding: 0;
+    overflow: auto;
 }
 .container{
     display: grid;
-    grid-template-columns: 80px auto;
-    /*position: relative;*/
+    grid-template-columns: 6% auto;
 }
-/*styling sidebar*/
 .sidebar{
     background-color: rgb(20, 20, 68);
     height:100%;
-    
 }
 .menu{
     padding-top: 200px;
@@ -19,28 +17,30 @@ body{
     color: white;
     font-size: 30px;
 }
-
 .menuitem{
     padding-top: 40px;
     padding-left: 30px;
 }
-/*styling main*/
 .main{
     background-color: white;
 }
+.form{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: white;
+    padding:60px;
+}
 .user{
     background-color: white;
-    height: 50px;
+    height: 35px;
     padding-top: 15px;
-    padding-left: 1200px;
+    padding-left: 1100px;
     color: gray;
-    font-size: 28px;
-
+    font-size: 20px;
 }
 .orgimg{
     height:150px;
     background-image: url('../image/bg.png');
-    padding-top: 0px;
     color: black;
     font-size: 35px;
     font-weight: bold;
@@ -48,13 +48,56 @@ body{
     padding-top: 50px;
 }
 .dor{
-    height: 40px;
+    margin-top: 5px;
+    height: 50px;
     background-color: white;
-
-
+}
+.employee__list{
+    background-color: rgb(20, 20, 68);
+    color:white;
+    text-align: center;
+    height:50px;
+    border-left:1px solid rgb(34, 34, 34);
+    margin-top: 5px;
+}
+.employee__link{
+    color: white;
+    border-right:none;
+    float:left;
+    padding:10px;
+    text-align: center;
+}
+.employee__infobox{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    column-gap: 5px;
+    height: 290px;
+    padding-top: 10px;
+    background-color: rgb(206, 225, 233);
+}
+.employee__info{
+    padding: 10px;
+    background-color: white;
+    margin:30px;
+    border-left:1px solid gray;
+    width:150px;
+    line-height: 25px;
+    text-align: center;
+}
+.view__detail{
+    font-size: 10px;
+    
+}
+.view__button{
+    background-color: white;
+    border-radius: 30px;
+    margin-top: 30px;
 }
 .dorlist{
-    padding-left: 250px;
+    padding-left: 400px;
+    padding-top: 15px;
+    height:35px;
+    border:2px solid gray;
 }
 ul{
     list-style-type: none;
@@ -64,25 +107,30 @@ li{
     display: inline;
     float: left;
     float: center;
-    border-right:1px solid rgb(56, 56, 133);
+    border-right:1px solid rgb(34, 34, 34);
     padding:15px;
     padding-left: 15px;
-    height:10px;
+    height:5px;
 }
 a{
     text-decoration: none; 
     color: rgb(56, 56, 133);
     font-size: 15px;
     font-weight: bold;
-    
+    border-right: 2px solid rgb(56, 56, 133);
+    /*color:white;*/
+}
+.doritem{
+    height: 20px;
+    padding:10px;
 }
 .requestcont{
    display: grid;
    grid-template-columns: auto 300px;
    padding:10px;
    background-color: rgb(20, 20, 68);
-   margin-left: 30px;
-   margin-right: 30px;
+   margin-left: 0px;
+   margin-right: 0px;
    margin-top: 10px;
    height: 30px;
 }
@@ -105,6 +153,7 @@ a{
     height: 30px;
     border-style: none;
     font-size: 10px;
+    margin-top: 5px;
 }
 table{
     padding:30px;
@@ -112,24 +161,147 @@ table{
     color: rgb(20, 20, 68);
     width: 100%;
 }
-
 footer{
-    padding-left: 500px;
+  padding-left: 400px;
+  text-align: left;
+  position: fixed;
     bottom: 0;
 }
-
 table td {
-    background: red;
+    background: gray;
     padding: 10px;
     text-align: left;
     color: white;
-    
-
 }
 table th {
     background: gray;
     color: white;
 }
-
-
-
+.formbg{
+    display: grid;
+    grid-template-columns: 900px 50%;
+    position: absolute;
+    z-index: 0;
+}
+.laptopbg{
+    background-image: url('../image/laptop.png');
+}
+.colorbg{
+    background-color: rgb(20, 20, 68); 
+    height: 100vh;
+    opacity: 80%;
+}
+.formcont{
+    background-color: white;
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    border: 2px solid gray;
+    margin-left: 700px;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-top: 100px;
+    color: rgb(20, 20, 68);
+    z-index: 1;
+}
+.logo{
+    height:30px;
+    width: 100px;
+    padding: 0 100px 0 80px;
+}
+.formitem{
+   padding-top: 40px;
+   border-bottom: 1px solid black;
+   font-weight: bold;
+}
+input{
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-top-style: hidden;
+    border-bottom-style: hidden;
+    padding-bottom: 10px;
+}
+.forminput{
+    border:1px solid rgb(221, 214, 214);
+    width:300px;
+}
+.form{
+    margin:40px;
+}
+.no-outline:focus{
+    outline: none;
+}
+.nis{
+    padding-left: 70px;
+}
+.npass{
+    padding-left: 10px;
+    margin-top: 40px;
+    font-size: 12px;
+    color:rgb(20, 20, 68);
+}
+.pass{
+    font-size: 13px;
+    padding: 0 0 0 100px;
+}
+.pasreset{
+    padding-top: 120px;
+    text-align:center;
+}
+.submitbox{
+    padding-top: 50px;
+}
+.submit{
+    background-color: rgb(20, 20, 68) ;
+    color: white;
+    margin: 10px 0 0 80px;
+    border: 0px;
+    height: 40px;
+    width: 130px;
+    opacity: 90%;
+}
+.welcome{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 30px;
+    height: 300px;
+    padding-top: 50px;
+    margin-left: 150px;
+    margin-right: 30px;
+}
+.welcomeitem {
+    height:100px;
+    width:200px;
+    background-color:rgb(20, 20, 68) ;
+    color: white;
+    text-align: center;
+    padding: 50px;
+    font-size: 30px;
+}
+.image{
+margin:50px 0px 0px 500px;
+height: 100px;
+width: 100px;
+border-radius: 200px;
+}
+.img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.profile__info{
+    text-align: center;
+    padding-right: 150px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.update__button{
+   background-color:  rgb(20, 20, 68);
+   margin-bottom: 50px;
+   margin-top: 30px;
+   margin-right: 200px;
+   height: 30px;
+   width: 100px;
+}
